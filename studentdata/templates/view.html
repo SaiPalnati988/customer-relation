@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdn.html' %}
+    <style media="screen">
+      body{
+        background:url(https://images.unsplash.com/photo-1472289065668-ce650ac443d2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869);
+        background-repeat:no-repeat;
+        background-size:cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-3 col-md-6"><br>
+          <center><h1>|| AVAILABLE DATA ||</h1></center><br>
+          <form method="POST">
+            {% csrf_token %}
+            <!-- <label> Enter Your Name : </label> -->
+            <h2 style="font-family:serif;"> Name : {{ v.name|capfirst }}</h2>
+            <!-- <input type="text" name="name" value="{{ v.name }}" placeholder="Enter Your Name" class="form-control"><br> -->
+            <!-- <label> ENter Your Roll No : </label> -->
+            <h2 style="font-family:serif;"> Roll_no : {{ v.roll_no }}</h2>
+            <!-- <input type="number" name="roll_no" value="{{ v.roll_no }}" placeholder="Enter Your Roll No" class='form-control'><br> -->
+            <!-- <label> Enter Your Mobile Number : </label> -->
+            <!-- <input type="number" name="mobile" value="{{ v.mobile }}" placeholder="Enter Your Mobile" class="form-control"><br> -->
+            <!-- <label> Enter Your Institute : </label> -->
+            <h2 style="font-family:serif;"> Mobile : {{ v.mobile }}</h2>
+            <!-- <input type="text" name="institute" value="{{ v.institute }}" placeholder="Enter Your Institute" class="form-control"><br> -->
+            <!-- <label> Enter Your Location : </label> -->
+            <h2 style="font-family:serif;"> Institute : {{ v.institute }}</h2>
+            <!-- <input type="text" name="location" value="{{ v.location }}" placeholder="Enter Your Location" class="form-control"><br> -->
+            <h2 style="font-family:serif;">Location: {{ v.location }}</h2>
+            <center>
+              <button type="submit" name="back" class="btn btn-outline-success"><a href="/" style="color:black; text-decoration:none; color:black;"> GO BACK </a></button>
+            </center>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

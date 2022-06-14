@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdn.html' %}
+    <style media="screen">
+      body{
+        background:url(https://images.unsplash.com/photo-1472289065668-ce650ac443d2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869);
+        background-repeat:no-repeat;
+        background-size:cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-3 col-md-6"><br>
+          <center><h1>|| ENTER YOUR DATA ||</h1></center><br>
+          <form method="POST" action="wish.html">
+            {% csrf_token %}
+            <label> Enter Your Name : </label>
+            <input type="text" name="name" placeholder="Enter Your Name" class="form-control"><br>
+            <label> ENter Your Roll No : </label>
+            <input type="number" name="roll_no" placeholder="Enter Your Roll No" class='form-control'><br>
+            <label> Enter Your Mobile Number : </label>
+            <input type="number" name="mobile" placeholder="Enter Your Mobile" class="form-control"><br>
+            <label> Enter Your Institute : </label>
+            <input type="text" name="institute" placeholder="Enter Your Institute" class="form-control"><br>
+            <label> Enter Your Location : </label>
+            <input type="text" name="location" placeholder="Enter Your Location" class="form-control"><br>
+            <center>
+              <button type="submit" name="save" class="btn btn-outline-primary"> SUBMIT </button>&nbsp&nbsp&nbsp&nbsp
+              <button type="reset" name="cancel" class="btn btn-outline-danger"> CANCEL </button>
+            </center>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

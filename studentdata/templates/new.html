@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdn.html' %}
+    <style media="screen">
+      body{
+        background:url(https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+        background-size:cover;
+        background-repeat:no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <center>
+            <button type="submit" name="new_user" class="btn btn-lg btn-outline-primary" style="margin-left:300px; margin-top:300px;"><a href="{% url 'register' %}" style="text-decoration:none; color:black;"> New User </a></button><br><br>
+            <button type="submit" name="existing_user" class="btn btn-lg btn-outline-success" style="margin-left:300px;"><a href="{% url 'mainpage' %}" style="text-decoration:none; color:black;"> Existing Users </a></button>
+            </center>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
